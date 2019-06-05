@@ -1,4 +1,7 @@
 {
+    "behat/transliterator": {
+        "version": "v1.2.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -99,6 +102,21 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
+    "friendsofsymfony/jsrouting-bundle": {
+        "version": "2.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.3",
+            "ref": "a9f2e49180f75cdc71ae279a929c4b2e0638de84"
+        }
+    },
+    "gedmo/doctrine-extensions": {
+        "version": "v2.4.37"
+    },
+    "hashids/hashids": {
+        "version": "2.0.4"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -107,6 +125,9 @@
     },
     "nikic/php-parser": {
         "version": "v4.2.2"
+    },
+    "ocramius/package-versions": {
+        "version": "1.4.0"
     },
     "ocramius/proxy-manager": {
         "version": "2.1.1"
@@ -144,6 +165,15 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "stof/doctrine-extensions-bundle": {
+        "version": "1.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.2",
+            "ref": "6c1ceb662f8997085f739cd089bfbef67f245983"
+        }
+    },
     "swiftmailer/swiftmailer": {
         "version": "v6.2.1"
     },
@@ -174,6 +204,9 @@
             "bin/console",
             "config/bootstrap.php"
         ]
+    },
+    "symfony/contracts": {
+        "version": "v1.1.0"
     },
     "symfony/css-selector": {
         "version": "v4.3.0"
@@ -502,6 +535,24 @@
             "ref": "dae9b39fd6717970be7601101ce5aa960bf53d9a"
         }
     },
+    "symfony/webpack-encore-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "e33393e32759195f8e10c9d4faceb0d232a7e1de"
+        },
+        "files": [
+            "assets/css/app.css",
+            "assets/js/app.js",
+            "config/packages/assets.yaml",
+            "config/packages/prod/webpack_encore.yaml",
+            "config/packages/webpack_encore.yaml",
+            "package.json",
+            "webpack.config.js"
+        ]
+    },
     "symfony/yaml": {
         "version": "v4.3.0"
     },
@@ -510,6 +561,9 @@
     },
     "webmozart/assert": {
         "version": "1.4.0"
+    },
+    "willdurand/jsonp-callback-validator": {
+        "version": "v1.1.0"
     },
     "zendframework/zend-code": {
         "version": "3.3.1"

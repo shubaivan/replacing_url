@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <main role="main">
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <a href="{{ path('index') }}">
+                    <h1 class="jumbotron-heading">Hash Link</h1>
+                </a>
+                <p class="lead text-muted"></p>
+                <p>
+                    {{ form_start(form, {'attr': {'id': 'check_submited'}}) }}
+                    <i class="fas fa-link fa-5x"></i> {{ form_label(form.url) }}
+                    {{ form_widget(form.url) }}
+                    <i class="fas fa-paper-plane"></i> {{ form_label(form.send) }}
+                    {{ form_widget(form.send) }}
+                    {{ form_end(form) }}
+                    {#<a href="#" class="btn btn-primary my-2">Main call to action</a>#}
+                    {#<a href="#" class="btn btn-secondary my-2">Secondary action</a>#}
+                </p>
+                {% if is_granted('ROLE_ADMIN') %}
+
+                {% endif %}
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row" id="main_content">
+
+                    {# @var urls \App\Entity\HashLink[] #}
+                    {% for url in urls %}
+                        {% include '_partial/_part_url.html.twig' with {url:url} %}
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/index/js/index.min.js') }}"></script>
+{%  endblock %}

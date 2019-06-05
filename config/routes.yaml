@@ -1,3 +1,18 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+fos_js_routing:
+  resource: "@FOSJsRoutingBundle/Resources/config/routing/routing-sf4.xml"
+
+reduction_url_redirect:
+  path: /redirect/{code}
+  controller: App\Controller\RedirectController::indexAction
+  methods: GET
+  options:
+    expose: true
+  requirements:
+    code: \S+
+
+reduction_url_encode:
+  path: /url
+  controller: App\Controller\EncodeController::indexAction
+  options:
+    expose: true
+  methods: POST
