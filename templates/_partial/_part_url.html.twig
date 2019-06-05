@@ -5,7 +5,7 @@
             <a href={{ path('reduction_url_redirect', {'code': url.hash}) }} target="_blank"><i class="fas fa-link"></i> {{ url.hash }}</a>
             <i class="fas fa-calculator"></i> <span id="count">{{ url.count }}</span>
 
-            <a href={{ path('staictic') }}>
+            <a href={{ path('staictic', {'id': url.id}) }}>
                 <i class="fas fa-external-link-alt"></i>
             </a>
         </li>
