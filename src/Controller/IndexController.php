@@ -28,8 +28,7 @@ class IndexController extends AbstractController
      */
     public function home()
     {
-        if ($this->isGranted('ROLE_USER') || $this->isGranted('ROLE_ADMIN'))
-        {
+        if ($this->isGranted('ROLE_USER') || $this->isGranted('ROLE_ADMIN')) {
             return $this->renderIndexData();
         }
 
